@@ -1,0 +1,35 @@
+
+<table class="flight-list">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let flight of data">
+        <td>{{flight.flightName}}</td>
+        <td>{{flight.source}}</td>
+        <td>{{flight.destination}}</td>
+        <td>{{flight.journeyDate}}</td>
+        <td>{{flight.departureTime}}</td>
+        <td>{{flight.arrivalTime}}</td>
+        <td>{{flight.amount}}</td>
+        <td><a (click)="onSelect(flight.flightId)">Book</a></td>
+      </tr>
+      <!-- Add more flight rows here -->
+    </tbody>
+  </table>
+  
+<div class="button-container">
+  <button>Previous</button>
+  <button>Next</button>
+</div>
+
+  

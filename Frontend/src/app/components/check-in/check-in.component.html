@@ -1,0 +1,24 @@
+<h3>Welcome to Flamingo Check-In</h3>
+
+<h4>Enter Reservation ID :</h4>
+<input type="number" name="reservationId" [(ngModel)]="reservationId" />
+<button class="btn btn-primary" (click)="getReservationData()">GET DETAILS</button>
+
+<form *ngIf="hide == false">
+  <h2>Flight Details:</h2>
+  <h5>Airlines: {{ reservation?.flightBooked?.flightId }}</h5>
+  <h5>Flight No: {{ reservation?.flightBooked?.flightName }}</h5>
+  <h5>Departure City: {{ reservation?.flightBooked?.source }}</h5>
+  <h5>Arrival City: {{ reservation?.flightBooked?.destination }}</h5>
+  <h5>Date Of Departure: {{ reservation?.flightBooked?.journeyDate }}</h5>
+  <h5>Estimated Departure Time: {{ reservation?.flightBooked?.departureTime }}</h5>
+  <h5>Estimated Departure Time: {{ reservation?.flightBooked?.arrivalTime }}</h5>
+  <h5>Total Passengers: {{ reservation?.noOfSeats }}</h5>
+
+  <h6 style="color: red;">&nbsp;Note : Bag Weight allowed per Passenger : 20kg<br>&nbsp;Bags above weight will be charged extra as per boarding rules</h6>
+  <h4>No Of Bags :</h4>
+  <input type="number" name="noOfBags" [(ngModel)]="checkinReq.noOfBags" />
+  <button class="btn btn-primary" (click)="startCheckIn()">CHECK IN</button>
+</form>
+
+<h5 *ngIf="displayMsg == true"><b> You are already Checked In</b></h5>
