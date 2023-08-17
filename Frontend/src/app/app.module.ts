@@ -11,7 +11,7 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservationService } from './services/reservation.service';
 import { CheckINComponent } from './components/check-in/check-in.component';
-import { CongratrulationsComponent } from './congratrulations/congratrulations.component';
+import { CongratrulationsComponent } from './components/congratrulations/congratrulations.component';
 
 
 

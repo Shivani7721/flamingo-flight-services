@@ -5,7 +5,7 @@ import { DisplayFlightsComponent } from './components/display-flights/display-fl
 import { PassengerDetailsComponent } from './components/passenger-details/passenger-details.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { CheckINComponent } from './components/check-in/check-in.component';
-import { CongratrulationsComponent } from './congratrulations/congratrulations.component';
+import { CongratrulationsComponent } from './components/congratrulations/congratrulations.component';
 
 const routes: Routes = [
   {
