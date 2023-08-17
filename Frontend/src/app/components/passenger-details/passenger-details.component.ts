@@ -44,7 +44,6 @@ addFormFields() {
 
   public onSubmit(): any {
     this.reservation.flightId = this.flightD.flightId;
-    console.log("F data:" + this.reservation.flightId);
     this.reservation.noOfSeats = this.noOfSeats;
     this.service.saveReservation(this.reservation)
       .pipe(

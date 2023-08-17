@@ -12,10 +12,11 @@ nav{
 body {
     font-family: Arial, sans-serif;
     
-    background-image: url('../../../assets/image1.jpg');
+    background-image: url('../../../assets/flightPortalImage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-size: 1480px 650px;
   }
   h1 {
     margin: 0;
@@ -47,8 +48,6 @@ body {
   
   .search-form input[type="submit"] {
     background-color: #f76e0c;
-    /* background-color: #b50c69; */
-    /* background-color: #5c3de6; */
     border: none;
     color: #fff;
     cursor: pointer;

@@ -2,21 +2,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* background-image: url('../assets/flightportal2.jpg'); */
   background-color: #acc1ee;
-  /* background-color: #f9c58e; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 header {
-  /* background-color: #0f7a83; */
   background-color: #b0aafcf3;
   font-family: Arial, Helvetica, sans-serif;
   border: #adadaf 2px solid;
-  /* background-color: #b50c69; */
-  /* color: #fff; */
   color: #2c0a8b;
   padding: 10px;
   text-align: center;
