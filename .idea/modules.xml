@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flamingo-flight-services.iml" filepath="$PROJECT_DIR$/.idea/flamingo-flight-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Flamingo Flights Booking.iml" filepath="$PROJECT_DIR$/.idea/Flamingo Flights Booking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Flamingo-Flights-Booking/Flamingo-Flights-Booking.iml" filepath="$PROJECT_DIR$/Flamingo-Flights-Booking/Flamingo-Flights-Booking.iml" />
     </modules>
   </component>
 </project>
