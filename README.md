@@ -14,9 +14,60 @@ Basic Features :
 1. Flight Search based on origin, destination and date.
 2. Flight Reservation functionality
 3. Flight Checkin functionality
-4. Customer Support Page
-5. View Bookings Page
 
-As soon as these features are completely developed ,we can then move towards the Stage-02 of Project.
-The Upcomming Features would be published once Stage-01 is Complete.
+******************************************************************************************************************
+******************************************************************************************************************
 
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy JAR app to Azure Web App - Flamingo-App-Service
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java version
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: java-app
+          path: '${{ github.workspace }}/target/*.jar'
+
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: java-app
+      
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'Flamingo-App-Service'
+          slot-name: 'production'
+          package: '*.jar'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_0c3754a81d29407a9299ad33b798563c }}
