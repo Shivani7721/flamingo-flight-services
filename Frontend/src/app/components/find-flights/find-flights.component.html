@@ -1,0 +1,23 @@
+<html>
+<body>
+  <nav class="nav">
+    <a class="nav-link active" href="/">Book</a>
+    <a class="nav-link active" href="/checkin">Check In</a>
+    <a class="nav-link active" href="#">View Bookings</a>
+    <a class="nav-link active" href="#">Customer Support</a>
+  </nav>
+
+   <form  class="search-form"  #flightSearchForm="ngForm" (ngSubmit) = "OnSubmit()">
+    <div >
+    <input type="text" placeholder="Origin" name="source" [(ngModel)] = "criteria.from">
+    <input type="text" placeholder="Destination" name="destination" [(ngModel)] = "criteria.to">
+    <input type="date" name="journeyDate" [(ngModel)] = "myDate">
+    <input type="submit" value="Search Flights">
+    </div>
+  </form>
+
+</body>
+  
+
+</html>
+<router-outlet></router-outlet>

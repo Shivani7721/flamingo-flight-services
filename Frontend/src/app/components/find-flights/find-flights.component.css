@@ -1,0 +1,58 @@
+nav{
+  background-color: white;
+  color: rgb(8, 8, 76);
+  padding: 5px;
+  border: 3px solid orange;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav-link active
+{
+  text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url('../../../assets/flightPortalImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 1480px 650px;
+  }
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .search-form {
+    padding: 50px;
+    margin: 20px auto;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    background-color: transparent; /* Set the form background to transparent */
+  }
+  
+  .search-form input[type="text"],
+  .search-form input[type="date"],
+  .search-form input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Set the input background with transparency */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+  }
+  
+  .search-form input[type="submit"] {
+    background-color: #f76e0c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+
+  

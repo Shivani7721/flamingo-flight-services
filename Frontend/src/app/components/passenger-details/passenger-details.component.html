@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Complete Reservation</title>
+  </head>
+  <body>
+    <h4>Complete Reservation:</h4>
+    <h4>Flight Details:</h4>
+    <form>
+      <h5><b>Flight No: </b> &nbsp;&nbsp;{{flightD?.flightId}}<br/></h5>
+      <h5><b>Airline: </b> &nbsp;&nbsp;{{flightD?.flightName}}<br/></h5>
+      <h5><b>Departure City: </b>{{flightD?.source}}<br/></h5>
+      <h5><b>Arrival City: </b> &nbsp;{{flightD?.destination}}<br/></h5>
+      <h5><b>Departue Date: </b> {{flightD?.journeyDate}}<br/></h5>
+      <h5><b>Departue Time: </b>{{flightD?.departureTime}}<br/></h5>
+      <h5><b>Arrival Time: </b>&nbsp;{{flightD?.arrivalTime}}<br/></h5>
+      <h5><b>Ticket Fare: </b>&nbsp;{{flightD?.amount}}<br/></h5>
+    </form>
+    
+    <form #passengerForm="ngForm" (ngSubmit)="onSubmit()">
+      <li *ngFor="let index of formIndexes"><b><label for="input{{ index }}">Passenger {{ index + 1 }}:</label></b>
+        <h5>Name: &nbsp;<input type="text" name="name" [(ngModel)]="reservation.pList[index].name"/></h5>
+        <h5>Age : &nbsp;&nbsp;&nbsp;<input type="number" name="age" [(ngModel)]="reservation.pList[index].age" /></h5>
+        <h5>Phone: <input type="text" name="phone" [(ngModel)]="reservation.pList[index].phone"/></h5>
+        <h5>Email: &nbsp;<input type="text" name="email" [(ngModel)]="reservation.pList[index].email" /> </h5>  
+      </li>
+      <button class="btn btn-primary" type="button" (click)="addFormFields()">Add Passengers</button> <br>
+      <input type="submit" value="CONFIRM">
+  </form>
+
+  </body>
+</html>

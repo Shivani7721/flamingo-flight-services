@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #acc1ee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: #b0aafcf3;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #adadaf 2px solid;
+  color: #2c0a8b;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #6c67b8f3;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #adadaf 2px solid;
+  color: #e0dfe5;
+  padding: 10px;
+  text-align: center;
+}
