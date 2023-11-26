@@ -34,7 +34,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'Production'
+      name: 'production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
@@ -48,6 +48,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Flamingo-App-Service'
-          slot-name: 'Production'
+          slot-name: 'production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA815D4E4D2E4439A3497C5E3025FDB2 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_0bddc3b58adb4f1e8b51bff02af8f6ec }}
