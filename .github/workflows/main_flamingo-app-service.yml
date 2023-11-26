@@ -50,4 +50,4 @@ jobs:
           app-name: 'Flamingo-App-Service'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BE4E645C72584AE487105E3400CDDA52 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA815D4E4D2E4439A3497C5E3025FDB2 }}
