@@ -34,7 +34,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
@@ -42,12 +42,22 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-      
+        
+      - name: Azure Login
+        uses: Azure/login@v1.5.0
+        with:
+        # ClientId of the Azure Service principal created.
+           # client-id: # optional
+        # TenantId of the Azure Service principal created.
+           # tenant-id: # optional
+        # Azure subscriptionId
+            subscription-id: 1b6c4fc9-3054-4860-9dec-a7b4f97194f6
+          
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Flamingo-App-Service'
-          slot-name: 'production'
+          slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_0bddc3b58adb4f1e8b51bff02af8f6ec }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA815D4E4D2E4439A3497C5E3025FDB2 }}
