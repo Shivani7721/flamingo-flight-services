@@ -42,16 +42,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-        
-      - name: Azure Login
-        uses: Azure/login@v1.5.0
-        with:
-        # ClientId of the Azure Service principal created.
-           # client-id: # optional
-        # TenantId of the Azure Service principal created.
-           # tenant-id: # optional
-        # Azure subscriptionId
-            subscription-id: 1b6c4fc9-3054-4860-9dec-a7b4f97194f6
           
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
